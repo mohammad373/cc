@@ -31,7 +31,7 @@ def __site__():
                 sys.exit()
             except:
                 pass
-        else:
+        if r.status_code != 200:
 
                 time.sleep(2)
                 print(Fore.RED + "[-] ~ Your Target Is Not Info ;(")
