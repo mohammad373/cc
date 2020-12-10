@@ -22,6 +22,11 @@ def __site__():
                 pass
         s = "http://" + site
         r = requests.get(s)
+        if r.status_code != 200:
+                time.sleep(2)
+                print(Fore.RED + "[-] ~ Your Target Is Not Info ;(")
+                time.sleep(1)
+                sys.exit()
         if r.status_code == 200:
             try:
                 time.sleep(2)
@@ -30,10 +35,6 @@ def __site__():
                 sys.exit()
             except:
                 pass
-        if r.status_code != 200:
-                time.sleep(2)
-                print(Fore.RED + "[-] ~ Your Target Is Not Info ;(")
-                time.sleep(1)
-                sys.exit()
+
 
 __site__()
