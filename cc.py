@@ -7,9 +7,8 @@ import time
 import sys
 
 def __site__():
-    os.system("clear")
-    time.sleep(1)
-    try:
+        os.system("clear")
+        time.sleep(1)
         print(Fore.YELLOW + "Hellow . Welcome Back ;)")
         time.sleep(1)
         site = input(Fore.BLUE + "\n[" + Fore.RED + "!" + Fore.BLUE + "]" + Fore.RED + " ~ " + Fore.YELLOW + "Pleass Enter Your Address WebSite " + Fore.GREEN + "==>  ")
@@ -32,12 +31,9 @@ def __site__():
             except:
                 pass
         if r.status_code != 200:
-
                 time.sleep(2)
                 print(Fore.RED + "[-] ~ Your Target Is Not Info ;(")
                 time.sleep(1)
                 sys.exit()
 
-    except:
-        pass
 __site__()
