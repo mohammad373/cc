@@ -32,13 +32,12 @@ def __site__():
             except:
                 pass
         else:
-            try:
+
                 time.sleep(2)
                 print(Fore.RED + "[-] ~ Your Target Is Not Info ;(")
                 time.sleep(1)
                 sys.exit()
-            except:
-                pass
+
     except:
         pass
 __site__()
